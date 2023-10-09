@@ -1,0 +1,194 @@
+.header
+   background: rgba(76, 79, 77, 0.30)
+   position: relative
+   &__content
+      display: flex
+      justify-content: space-between
+      align-items: center
+      padding: 20px 35px
+      @media screen and ( max-width: 400px)
+         padding: 10px 10px
+
+   &__logo
+      img
+         @media screen and ( max-width: 400px)
+            width: 40px
+            height: 40px
+            transition: all 1s
+         &:hover
+            transform: rotate(360deg)
+
+.nav-menu
+   @media screen and ( max-width: 1023px)
+      display: none
+
+   &__list
+      display: flex
+      align-items: center
+      gap: 50px
+   &__link
+      font-family: SofiaSans
+      font-size: 24px
+      text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+      padding-left: 25px
+      position: relative
+      &:active
+         top: 3px
+      &::before
+         position: absolute
+         left: -30px
+         opacity: 0
+         top: 7.5px
+         content: ''
+         width: 15px
+         height: 15px
+         border-radius: 50%
+         background-color: #000
+         transition: all 0.5s
+      &:hover
+         &::before
+            left: 0
+            opacity: 1
+
+.nav-menu.open
+   display: block
+   background-color: #fff
+   position: fixed
+   top: 0
+   left: 0
+   z-index: 10
+   width: 100vw
+   height: 100vh
+   display: flex
+   justify-content: center
+   align-items: center
+   overflow: hidden
+.nav-menu.open   .nav-menu__list
+      flex-direction: column
+
+.burger-menu
+   position: absolute
+   top: 50%
+   right: 20px
+   transform: translate(0, -50%)
+   z-index: 11
+
+   @media screen and ( min-width: 1024px)
+      display: none !important
+
+.burger-menu__button
+   min-width: 42px
+   height: 42px
+
+   background: transparent
+
+   border: 1px solid #ffffff00
+
+   padding: 12px 8px
+
+   display: flex
+   flex-direction: column
+   justify-content: space-between
+
+   cursor: pointer
+   position: relative
+   transform: scale(1.5)
+
+.burger-menu__button span
+   width: 100%
+   height: 2px
+
+   background: #000
+
+   border-radius: 3px
+
+   box-shadow: 0 2px 10px 0 rgba(0,0,0, .3)
+
+   position: relative
+
+.burger-menu_active span:nth-child(1)
+   animation: ease .7s top forwards
+
+.burger-menu_not-active span:nth-child(1)
+   animation: ease .7s top-2 forwards
+
+.burger-menu_active span:nth-child(2)
+   animation: ease .7s scaled forwards
+
+.burger-menu_not-active span:nth-child(2)
+   animation: ease .7s scaled-2 forwards
+
+.burger-menu_active span:nth-child(3)
+   animation: ease .7s bottom forwards
+
+.burger-menu_not-active span:nth-child(3)
+   animation: ease .7s bottom-2 forwards
+
+@keyframes top
+   0%
+      top: 0
+      transform: rotate(0deg)
+
+   50%
+      top: 7px
+      transform: rotate(0deg)
+
+   100%
+      top: 7px
+      transform: rotate(45deg)
+
+@keyframes top-2
+   0%
+      top: 7px
+      transform: rotate(45deg)
+
+   50%
+      top: 7px
+      transform: rotate(0deg)
+
+   100%
+      top: 0
+      transform: rotate(0deg)
+
+@keyframes bottom
+   0%
+      bottom: 0
+      transform: rotate(0deg)
+
+   50%
+      bottom: 7px
+      transform: rotate(0deg)
+
+   100%
+      bottom: 7px
+      transform: rotate(135deg)
+
+@keyframes bottom-2
+   0%
+      bottom: 7px
+      transform: rotate(135deg)
+
+   50%
+      bottom: 7px
+      transform: rotate(0)
+
+   100%
+      bottom: 0
+      transform: rotate(0)
+
+@keyframes scaled
+   50%
+      transform: scale(0)
+
+   100%
+      transform: scale(0)
+
+@keyframes scaled-2
+   0%
+      transform: scale(0)
+
+   50%
+      transform: scale(0)
+
+   100%
+      transform: scale(1)
