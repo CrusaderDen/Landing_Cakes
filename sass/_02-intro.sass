@@ -3,10 +3,11 @@
    // min-height: 660px
    &__blur
       // min-height: 660px
-      background: rgba(255, 255, 255, 0.50)
+      background: rgba(15, 13, 13, 0.5)
       backdrop-filter: blur(5px)
       padding-bottom: 30px
    &__title
+      color: #d4c17f
       max-width: 740px
       text-align: center
       margin: 0 auto
@@ -19,6 +20,7 @@
       @media screen and ( max-width: 550px)
          font-size: 36px
    &__text
+      color: #d4c17f
       max-width: 1050px
       margin: 0 auto
       text-align: center
@@ -30,30 +32,30 @@
          font-size: 26px
       @media screen and ( max-width: 550px)
          font-size: 18px
+
    &__picture-blocks
       display: flex
-      justify-content: space-evenly
-      
-
-   .picture-block
-      @media screen and ( max-width: 1023px)
-         
-      &__picture
-         text-align: center
-         margin-bottom: 22px
-         transition: all 0.3s
-         img
+      justify-content: space-between
+.picture-block
+   &__picture
+      border-radius: 50%
+      text-align: center
+      margin-bottom: 22px
+      transition: all 0.3s
+      width: 250px
+      height: 250px
+      overflow: hidden
+      img
+         transition: all 0.5s
          &:hover
             transform: scale(1.2)
-      &__text
-         text-align: center
-         font-family: Sofia Sans
-         font-size: 30px
-         font-weight: 500
-         @media screen and ( max-width: 1023px)
-            font-size: 22px
-         @media screen and ( max-width: 550px)
-            font-size: 18px
-
-
-
+   &__text
+      color: #fff
+      // text-align: center
+      font-family: Sofia Sans
+      font-size: 30px
+      font-weight: 500
+      @media screen and ( max-width: 1023px)
+         font-size: 22px
+      @media screen and ( max-width: 550px)
+         font-size: 18px
