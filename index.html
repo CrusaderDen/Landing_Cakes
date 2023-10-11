@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Project</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="fonts/stylesheet.css" />
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/style.css" />
@@ -24,20 +28,18 @@
           </div>
           <nav class="header__nav nav-menu">
             <ul class="nav-menu__list">
-              <li__nav class="item"
-                ><a href="#!" class="nav-menu__link">Обо мне</a></li__nav
-              >
-              <li__nav class="item"
-                ><a href="#!" class="nav-menu__link"
-                  >Посмотреть работы</a
-                ></li__nav
-              >
-              <li__nav class="item"
-                ><a href="#!" class="nav-menu__link">Стоимость</a></li__nav
-              >
-              <li__nav class="item"
-                ><a href="#!" class="nav-menu__link">Заказать</a></li__nav
-              >
+              <li class="nav__item">
+                <a href="#about" class="nav-menu__link">Обо мне</a>
+              </li>
+              <li class="nav__item">
+                <a href="#gallery" class="nav-menu__link">Посмотреть работы</a>
+              </li>
+              <li class="nav__item">
+                <a href="#section-price" class="nav-menu__link">Стоимость</a>
+              </li>
+              <li class="nav__item">
+                <a href="#section-order" class="nav-menu__link">Заказать</a>
+              </li>
             </ul>
           </nav>
         </div>
@@ -57,7 +59,7 @@
                 <div class="picture-block__picture">
                   <img src="img/roll-tiny.webp" alt="Рулеты" />
                 </div>
-                <div class="picture-block__text">Нежные чизкейки</div>
+                <div class="picture-block__text">Нежные рулеты</div>
               </div>
               <div class="picture-block">
                 <div class="picture-block__picture">
@@ -75,7 +77,219 @@
           </div>
         </div>
       </section>
+      <section class="about">
+        <div class="container">
+          <h2 class="about__title" id="about">Обо мне</h2>
+          <div class="about__content">
+            <div class="about__img">
+              <img src="img/about.png" alt="моя фотография" />
+            </div>
+            <div class="about__text-block">
+              <p class="about__text">
+                Всем привет! Меня зовут Светлана и я очень люблю готовить -
+                баловать своих родных и близких вкусненьким.
+              </p>
+              <p class="about__text">
+                Около 5 лет назад я занялась изготовлением десертов
+                профессионально и с тех пор изготовила более 200 тортов,
+                капкейков и чизкейков. Имею большую базу ассортимента на любой
+                вкус, у меня появилось много постоянных клиентов.
+              </p>
+              <p class="about__text">
+                Я работаю только с натуральными продуктами, лично ручаюсь за
+                качество ингридиентов и конечного продукта. Крем для пропитки
+                тортов – крем чиз на сливках. Для декора используется печать на
+                сахарной бумаге, цветы из вафельной бумаги, мастика, печенье,
+                шоколад, сферы, безе и леденцы на палочке, так же для декора
+                могут использоваться живые цветы.
+              </p>
+              <p class="about__text">
+                Примеры моих работ вы можете увидеть в галерее фото. Каждый
+                заказ обсуждается от и до, учитываются все пожелания клиента.
+                Все заказы выполняю качественно и в срок. Вы можете сделать
+                заказ минимум за 3 дня до мероприятия. Возможна бесплатная
+                доставка по городу. Мне нравится дарить радость моим клиентам и
+                видеть счастливые улыбки на их лицах!
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="advantage">
+        <div class="container">
+          <div class="advantage__row">
+            <div class="item-advantage">
+              <div class="item-advantage__img">
+                <img src="icons/adv-hand.svg" alt="иконка" />
+              </div>
+              <div class="item-advantage__text">
+                <div class="item-advantage__text-top">200+</div>
+                <div class="item-advantage__text-bottom">
+                  довольных клиентов
+                </div>
+              </div>
+            </div>
+            <div class="item-advantage">
+              <div class="item-advantage__img">
+                <img src="icons/adv-trophy.svg" alt="иконка" />
+              </div>
+              <div class="item-advantage__text">
+                <div class="item-advantage__text-top">5</div>
+                <div class="item-advantage__text-bottom">лет опыта</div>
+              </div>
+            </div>
+            <div class="item-advantage">
+              <div class="item-advantage__img">
+                <img src="icons/adv-cake.svg" alt="иконка" />
+              </div>
+              <div class="item-advantage__text">
+                <div class="item-advantage__text-top">30+</div>
+                <div class="item-advantage__text-bottom">
+                  оригинальных рецептов
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="photo-gallery">
+        <div class="content photo-gallery__wrapper">
+          <div class="photo-gallery__title" id="gallery">Мои работы</div>
+          <div class="photo-gallery__slider">
+            <div class="swiper">
+              <div class="photo-gallery__subtitle">Торты</div>
+              <div class="swiper-wrapper cakes"></div>
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
+              <div class="swiper-pagination"></div>
+            </div>
+            <div class="swiper">
+              <div class="photo-gallery__subtitle">Капкейки</div>
+              <div class="swiper-wrapper cupcakes"></div>
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
+              <div class="swiper-pagination"></div>
+            </div>
+            <div class="swiper">
+              <div class="photo-gallery__subtitle">В разрезе</div>
+              <div class="swiper-wrapper sliced"></div>
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="price" id="section-price">
+        <div class="container">
+          <div class="price__title">Стоимость</div>
+          <p class="price__text">
+            Повседневная практика показывает, что укрепление и развитие
+            структуры обеспечивает широкому кругу (специалистов) участие в
+            формировании системы обучения кадров, соответствует насущным
+            потребностям. Равным образом дальнейшее развитие различных форм
+            деятельности обеспечивает широкому кругу (специалистов)
+          </p>
+        </div>
+      </section>
+      <section class="order" id="section-order">
+        <div class="container">
+          <div class="order__title">Заказать</div>
+          <div class="order__subtitle">Свяжитесь удобным для вас образом:</div>
+          <div class="order__list order-list">
+            <div class="order-list__item">
+              <div class="order-list__text">Социальные сети:</div>
+              <div class="order-list__contacts">
+                <div class="order-list__socials">
+                  <a href="https://vk.com/id31940545"
+                    ><img src="icons/social-vk.png" alt="иконка"
+                  /></a>
+                  <a href="https://t.me/crusaderDen"
+                    ><img src="icons/social-telegram.png" alt="иконка"
+                  /></a>
+                  <a href="viber://chat?number=79806864555"
+                    ><img
+                      class="order-list__socials-viber"
+                      src="icons/social-viber.png"
+                      alt="иконка"
+                  /></a>
+                  <a href="https://api.whatsapp.com/send?phone=79806864555"
+                    ><img src="icons/social-whatsapp.png" alt="иконка"
+                  /></a>
+                  <a href="https://t.me/crusaderDen"
+                    ><img src="icons/social-insta.png" alt="иконка"
+                  /></a>
+                </div>
+              </div>
+            </div>
+            <div class="order-list__item">
+              <div class="order-list__text">Позвонить (с 9 до 20):</div>
+              <div class="order-list__contacts">
+                <div class="order-list__socials">
+                  <a href="tel:89806864555">8-980-686-45-55</a>
+                </div>
+              </div>
+            </div>
+            <div class="order-list__item">
+              <div class="order-list__text">
+                Через форму отправки сообщений:
+              </div>
+              <div class="order-list__btn order-btn">
+                <span class="order-btn__line-1"></span>
+                <span class="order-btn__line-2"></span>
+              </div>
+            </div>
+          </div>
+          <form action="#" class="order-form" id="form">
+            <div class="order-form__wrapper">
+              <input
+                class="order-form__name"
+                name="name"
+                type="text"
+                placeholder="Ваше имя*"
+                required
+              />
+              <input
+                class="order-form__tel"
+                type="tel"
+                name="phone"
+                placeholder="Контактный номер телефона*"
+                required
+              />
+              <textarea
+                class="order-form__message"
+                name="message"
+                cols="30"
+                rows="10"
+                placeholder="Наберите сообщение"
+              ></textarea>
+              <button type="submit" class="order-form__btn">Отправить</button>
+              <div class="order-form__info">
+                * Сообщение отправляется на мою электронную почту, данные
+                указываются для возможности обратной связи.
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="order-form__popup">
+          <div class="order-form__popup-body">
+            <div class="order-form__title">
+              Ваше обращение успешно отправлено!
+            </div>
+            <div class="order-form__popup-container">
+              <a href="##" class="order-form__popup-button" id="closeButton"
+                >Закрыть</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
+    <footer class="footer">
+      <div class="footer__text">Разработка сайта: Денис Крестов, 2023</div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/sendMail.js"></script>
   </body>
 </html>

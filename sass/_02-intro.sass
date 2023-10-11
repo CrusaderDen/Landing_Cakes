@@ -7,7 +7,7 @@
       backdrop-filter: blur(5px)
       padding-bottom: 30px
    &__title
-      color: #d4c17f
+      color: $text-color-main
       max-width: 740px
       text-align: center
       margin: 0 auto
@@ -20,7 +20,7 @@
       @media screen and ( max-width: 550px)
          font-size: 36px
    &__text
-      color: #d4c17f
+      color: $text-color-main
       max-width: 1050px
       margin: 0 auto
       text-align: center
@@ -37,7 +37,11 @@
       display: flex
       justify-content: space-between
 .picture-block
+   display: flex
+   flex-direction: column
+   align-items: center
    &__picture
+      border: 10px double #fff
       border-radius: 50%
       text-align: center
       margin-bottom: 22px
@@ -45,13 +49,22 @@
       width: 250px
       height: 250px
       overflow: hidden
+      @media screen and ( max-width: 1023px)
+         width: 180px
+         height: 180px
+      @media screen and ( max-width: 650px)
+         width: 160px
+         height: 160px
+      @media screen and ( max-width: 550px)
+         width: 100px
+         height: 100px
       img
          transition: all 0.5s
          &:hover
             transform: scale(1.2)
    &__text
-      color: #fff
-      // text-align: center
+      text-align: center
+      color: $text-color-white
       font-family: Sofia Sans
       font-size: 30px
       font-weight: 500

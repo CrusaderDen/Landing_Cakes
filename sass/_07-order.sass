@@ -1,0 +1,219 @@
+.order
+   &__title
+      text-align: center
+      text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+      font-family: Pacifico
+      font-size: 56px
+      margin-bottom: 11px
+      @media screen and ( max-width: 767px)
+         font-size: 42px
+      // @media screen and ( max-width: 410px)
+      //    font-size: 32px
+
+   &__subtitle
+      font-family: SofiaSans
+      font-size: 30px
+      margin-bottom: 29px
+      @media screen and ( max-width: 767px)
+         font-size: 22px
+      @media screen and ( max-width: 410px)
+         font-size: 18px
+
+.order-list
+   margin-bottom: 20px
+   &__item
+      max-width: 800px
+      display: flex
+      justify-content: space-between
+      align-items: center
+      &:not(:last-child)
+         margin-bottom: 30px
+   &__text
+      text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+      font-family: Montserrat
+      font-size: 30px
+      padding-left: 80px
+      position: relative
+      @media screen and ( max-width: 767px)
+         font-size: 18px
+      @media screen and ( max-width: 465px)
+         padding-left: 5px
+      @media screen and ( max-width: 410px)
+         font-size: 14px
+      &::after
+         content: ''
+         background-image: url('/icons/order-icon.png')
+         position: absolute
+         top: -2px
+         left: 10px
+         width: 56px
+         height: 40px
+         @media screen and ( max-width: 767px)
+            top: -12px
+         @media screen and ( max-width: 465px)
+            display: none
+   &__socials
+      display: flex
+      align-items: center
+      a
+         &:not(:last-child)
+            margin-right: 10px
+         img
+            width: 52px
+            height: 52px
+            &:hover
+               transform: translate(0, -5px)
+
+            @media screen and ( max-width: 767px)
+               width: 42px
+               height: 42px
+            @media screen and ( max-width: 410px)
+               width: 32px
+               height: 32px
+      a
+         text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+         font-family: Montserrat
+         font-size: 30px
+         text-decoration: underline
+         @media screen and ( max-width: 767px)
+            font-size: 18px
+         @media screen and ( max-width: 410px)
+            font-size: 12px
+
+.order-list__socials-viber
+   width: 47px !important
+   height: 47px !important
+   @media screen and ( max-width: 767px)
+      width: 38px !important
+      height: 38px !important
+   @media screen and ( max-width: 410px)
+      width: 28px !important
+      height: 28px !important
+
+.order-btn
+   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+   width: 45px
+   height: 45px
+   border: 1px solid black
+   background: #ecd47ccc
+   position: relative
+   @media screen and ( max-width: 767px)
+      transform: scale(0.7)
+   @media screen and ( max-width: 410px)
+      transform: scale(0.5)
+   &__line-1
+      display: block
+      background: #000
+      width: 25px
+      height: 3px
+      position: absolute
+      left: -2.5px
+      bottom: 10px
+      transform-origin: right
+      transform: rotate(45deg)
+   &__line-2
+      display: block
+      background: #000
+      width: 25px
+      height: 3px
+      position: absolute
+      right: -2.5px
+      bottom: 10px
+      transform-origin: left
+      transform: rotate(-45deg)
+
+.order-btn_open
+   transform: rotate(180deg)
+   @media screen and ( max-width: 767px)
+      transform: rotate(180deg) scale(0.7)
+   @media screen and ( max-width: 410px)
+      transform: rotate(180deg) scale(0.5)
+
+.order-form
+   margin-bottom: 50px
+   overflow: hidden
+   &__wrapper
+      padding: 30px
+      border: 2px solid black
+      grid-gap: 20px
+      transition: all 0.3s
+      transform: translate(0, -110%)
+      display: none
+   &__wrapper-open
+      display: grid
+      transform: translate(0, 0)
+   &__name
+      width: 320px
+      height: 41px
+      background: #C3CECB
+      border-radius: 5px
+      border: 1px solid black
+      padding-left: 5px
+      font-family: Montserrat
+      font-size: 18px
+      color: #393939
+      @media screen and ( max-width: 410px)
+         width: 100%
+      &::placeholder
+         font-family: Montserrat
+         font-size: 18px
+         color: #393939
+         @media screen and ( max-width: 410px)
+            font-size: 14px
+   &__tel
+      width: 320px
+      height: 41px
+      background: #C3CECB
+      border-radius: 5px
+      border: 1px solid black
+      padding-left: 5px
+      font-family: Montserrat
+      font-size: 18px
+      color: #393939
+      @media screen and ( max-width: 410px)
+         width: 100%
+      &::placeholder
+         font-family: Montserrat
+         font-size: 18px
+         color: #393939
+         @media screen and ( max-width: 410px)
+            font-size: 14px
+
+   &__message
+      background: #C3CECB
+      border-radius: 5px
+      border: 1px solid black
+      padding: 5px 0 0 5px
+      resize: none
+      font-family: Montserrat
+      font-size: 18px
+      color: #393939
+      @media screen and ( max-width: 410px)
+         width: 100%
+      &::placeholder
+         font-family: Montserrat
+         font-size: 18px
+         color: #393939
+         @media screen and ( max-width: 410px)
+            font-size: 14px
+   &__btn
+      border-radius: 10px
+      border: 1px solid #000
+      background: rgba(255, 230, 0, 0.60)
+      box-shadow: 2px 2px 4px 1px #000
+      text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+      font-family: SofiaSans
+      font-size: 24px
+      padding: 15px 46px
+      width: 226px
+      @media screen and ( max-width: 410px)
+         font-size: 18px
+         width: 100%
+      &:hover
+         background: rgba(255, 230, 0, 0.881)
+         transform: translate(0, -3px)
+      &:active
+         transform: translate(0, 0px)
+   &__info
+      font-family: Sofia Sans
+      font-size: 18px
