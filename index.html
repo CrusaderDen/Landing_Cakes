@@ -1,9 +1,89 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Project</title>
+    <meta
+      name="description"
+      content="Sweet37house - г. Иваново. Изготовление на заказ красивых и натуральных тортов, капкейков, чизкейков, меренговых рулетов. Возможна доставка по городам Иваново, Кохма. Лучший кондитер для Вашего праздника!"
+    />
+    <title>Sweet37house</title>
+    <link
+      rel="apple-touch-icon"
+      sizes="57x57"
+      href="icons/fav/apple-icon-57x57.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="60x60"
+      href="icons/fav/apple-icon-60x60.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="72x72"
+      href="icons/fav/apple-icon-72x72.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="76x76"
+      href="icons/fav/apple-icon-76x76.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="114x114"
+      href="icons/fav/apple-icon-114x114.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href="icons/fav/apple-icon-120x120.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="icons/fav/apple-icon-144x144.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="icons/fav/apple-icon-152x152.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="icons/fav/apple-icon-180x180.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="icons/fav/android-icon-192x192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="icons/fav/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="96x96"
+      href="icons/fav/favicon-96x96.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="icons/fav/favicon-16x16.png"
+    />
+    <link rel="manifest" href="icons/fav/manifest.json" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta
+      name="msapplication-TileImage"
+      content="icons/fav/ms-icon-144x144.png"
+    />
+    <meta name="theme-color" content="#ffffff" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
@@ -32,7 +112,9 @@
                 <a href="#about" class="nav-menu__link">Обо мне</a>
               </li>
               <li class="nav__item">
-                <a href="#gallery" class="nav-menu__link">Посмотреть работы</a>
+                <a href="#section-gallery" class="nav-menu__link"
+                  >Посмотреть работы</a
+                >
               </li>
               <li class="nav__item">
                 <a href="#section-price" class="nav-menu__link">Стоимость</a>
@@ -50,10 +132,10 @@
         <div class="intro__blur">
           <div class="container">
             <h1 class="intro__title">Добро пожаловать в мой сладкий мир!</h1>
-            <div class="intro__text">
+            <h2 class="intro__text">
               Я Светлана - кондитер с пятилетним стажем. Изготовлю на заказ
-              десерты для Вашего праздника.
-            </div>
+              десерты для Вашего праздника. <br /><br />г. Иваново
+            </h2>
             <div class="intro__picture-blocks">
               <div class="picture-block">
                 <div class="picture-block__picture">
@@ -79,7 +161,7 @@
       </section>
       <section class="about">
         <div class="container">
-          <h2 class="about__title" id="about">Обо мне</h2>
+          <h3 class="about__title" id="about">Обо мне</h3>
           <div class="about__content">
             <div class="about__img">
               <img src="img/about.png" alt="моя фотография" />
@@ -152,26 +234,34 @@
           </div>
         </div>
       </section>
-      <section class="photo-gallery">
-        <div class="content photo-gallery__wrapper">
-          <div class="photo-gallery__title" id="gallery">Мои работы</div>
-          <div class="photo-gallery__slider">
+      <section class="photo-gallery" id="section-gallery">
+        <div class="container">
+          <h3 class="photo-gallery__title">Мои работы</h3>
+          <div class="my-slider">
+            <h4 class="photo-gallery__subtitle" id="slider-cakes">Торты</h4>
             <div class="swiper">
-              <div class="photo-gallery__subtitle">Торты</div>
               <div class="swiper-wrapper cakes"></div>
               <div class="swiper-button-prev"></div>
               <div class="swiper-button-next"></div>
               <div class="swiper-pagination"></div>
             </div>
+          </div>
+          <div class="my-slider">
+            <h4 class="photo-gallery__subtitle" id="slider-cupcakes">
+              Капкейки
+            </h4>
             <div class="swiper">
-              <div class="photo-gallery__subtitle">Капкейки</div>
               <div class="swiper-wrapper cupcakes"></div>
               <div class="swiper-button-prev"></div>
               <div class="swiper-button-next"></div>
               <div class="swiper-pagination"></div>
             </div>
+          </div>
+          <div class="my-slider">
+            <h4 class="photo-gallery__subtitle" id="slider-sliced">
+              В разрезе
+            </h4>
             <div class="swiper">
-              <div class="photo-gallery__subtitle">В разрезе</div>
               <div class="swiper-wrapper sliced"></div>
               <div class="swiper-button-prev"></div>
               <div class="swiper-button-next"></div>
@@ -182,19 +272,20 @@
       </section>
       <section class="price" id="section-price">
         <div class="container">
-          <div class="price__title">Стоимость</div>
+          <h3 class="price__title">Стоимость</h3>
           <p class="price__text">
-            Повседневная практика показывает, что укрепление и развитие
-            структуры обеспечивает широкому кругу (специалистов) участие в
-            формировании системы обучения кадров, соответствует насущным
-            потребностям. Равным образом дальнейшее развитие различных форм
-            деятельности обеспечивает широкому кругу (специалистов)
+            Стоимость складывается из базовой и дополнительной. Базовая
+            стоимоcть зa 1 кг тopтика с кремом-чиз: 1500 рублей. Дополнительная
+            стоимость обсуждается индивидуально и зависит от используемого
+            декора - печать изображений на сладкой бумаге, натуральные фрукты,
+            лепка из мастики. Пожалуйста, обращайтесь по указанным ниже
+            контактам и мы всё подробно обсудим. Качество выше цены!
           </p>
         </div>
       </section>
       <section class="order" id="section-order">
         <div class="container">
-          <div class="order__title">Заказать</div>
+          <h3 class="order__title">Заказать</h3>
           <div class="order__subtitle">Свяжитесь удобным для вас образом:</div>
           <div class="order__list order-list">
             <div class="order-list__item">
@@ -204,10 +295,10 @@
                   <a href="https://vk.com/id31940545"
                     ><img src="icons/social-vk.png" alt="иконка"
                   /></a>
-                  <a href="https://t.me/crusaderDen"
+                  <a href="https://t.me/Sweet37house"
                     ><img src="icons/social-telegram.png" alt="иконка"
                   /></a>
-                  <a href="viber://chat?number=79806864555"
+                  <a href="https://viber.click/79806864555"
                     ><img
                       class="order-list__socials-viber"
                       src="icons/social-viber.png"
@@ -216,7 +307,8 @@
                   <a href="https://api.whatsapp.com/send?phone=79806864555"
                     ><img src="icons/social-whatsapp.png" alt="иконка"
                   /></a>
-                  <a href="https://t.me/crusaderDen"
+                  <a
+                    href="https://www.instagram.com/p/CWDHHVdt3w0/?utm_medium=copy_link"
                     ><img src="icons/social-insta.png" alt="иконка"
                   /></a>
                 </div>
@@ -288,6 +380,7 @@
     <footer class="footer">
       <div class="footer__text">Разработка сайта: Денис Крестов, 2023</div>
     </footer>
+    <script src="js/insertPhoto.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="js/script.js"></script>
     <script src="js/sendMail.js"></script>

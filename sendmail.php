@@ -44,6 +44,7 @@ if (!error_get_last()) {
     
     // Получатель письма
     $mail->addAddress('RUPO@list.ru');
+    $mail->addAddress('svetund@mail.ru');
     
     // Прикрипление файлов к письму
    //  if (!empty($file['name'][0])) {
